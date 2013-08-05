@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Page</title>
+        <script src="jquery-1.9.1.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                alert("test");
+				var imgTitle = '';
+                $('img').hover(
+                    function() {
+                        imgTitle = $(this).attr('title');
+                        $(this).removeAttr('title');
+                    },
+                    function() {
+                        $(this).attr('title', imgTitle);
+                    }
+                ); 
+            });
+        </script>
+    </head>
+    <body>
+        <h1>This is heading 1</h1>
+        <h2>This is heading 2</h2>
+        <h3>This is heading 3</h3>
+        <h4>This is heading 4</h4>
+        
+        <ul>
+            <li>cats</li>
+            <li>dogs</li>
+            <li>fish</li>
+        </ul>
+        
+        <img src="HTML5_Logo_512.png" width="100px"
+            title="HTML5 Logo" alt="alt text" />
+        
+        <p>
+            This is<br/>
+            the page!
+        </p>
+    </body>
+</html>
